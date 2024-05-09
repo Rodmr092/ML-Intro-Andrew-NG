@@ -34,7 +34,7 @@ def sigmoid(z):
      g : array_like
          sigmoid(z)
     """
-    z = np.clip( z, -500, 500 )           # protect against overflow
+    z = np.clip( z, -500, 500 )           # Limits values between -500 and 500 to avoid overflow
     g = 1.0/(1.0+np.exp(-z))
 
     return g
